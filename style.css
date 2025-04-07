@@ -13,8 +13,15 @@ ul,ol,li{
     list-style: none;
 }
 
+:root{
+    --primary-color: #F07807; /* criando cores com escopo global, para todo o projeto, usando o -- como boas práticas de nome */
+    --secundary-color: #FBDDC1;
+    --default-shadow: 0px 4px 4px #0004;
+}
+
 body{
     padding: 0px 80px;
+    font-family: "Poppins", sans-serif;
 
 }
 
@@ -24,12 +31,47 @@ header{
     position: absolute; /* tornando o header absolut ela deixa de ser do body, ficando sem pai */
     position: fixed; /* torna o objeto fixo, acompanhando sempre em toda a pagina */
     top: 60px;
-    background-color: lightblue;
+    display: flex;
+    justify-content: space-between; /* serve para espalhar eles no espaço */
+    align-items: center;
+}
+
+header menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+header li{
+    padding: 4px 8px;
+    transition: .5s;
+}
+
+header li:hover{
+    background-color: var(--secundary-color);
+    box-shadow: var(--default-shadow);
+
+}
+
+header button{
+    height: 48px;
+    width: 120px;
+    background-color: var(--secundary-color);
+    box-shadow: var(--default-shadow);
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    color: var(--primary-color);
 }
 
 main{
     height: 700px; /* temporario */
-    background-color: tomato;
+    background-color: lightblue;
 }
 
 footer{
