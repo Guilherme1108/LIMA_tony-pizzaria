@@ -13,3 +13,26 @@ ul,ol,li{
     list-style: none;
 }
 
+body{
+    padding: 0px 80px;
+
+}
+
+header{
+    height: 60px;
+    width: calc(100% - 160px); /* faz um calculo diminuindo 160px do tamanho da pagina, fazendo funcionar em qualquer tamanho de tela */
+    position: absolute; /* tornando o header absolut ela deixa de ser do body, ficando sem pai */
+    position: fixed; /* torna o objeto fixo, acompanhando sempre em toda a pagina */
+    top: 60px;
+    background-color: lightblue;
+}
+
+main{
+    height: 700px; /* temporario */
+    background-color: tomato;
+}
+
+footer{
+    height: 576px;
+    background-color: pink;
+}
