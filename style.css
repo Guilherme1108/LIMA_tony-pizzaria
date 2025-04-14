@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 a{
@@ -17,23 +17,24 @@ ul,ol,li{
     --primary-color: #F07807; /* criando cores com escopo global, para todo o projeto, usando o -- como boas práticas de nome */
     --secundary-color: #FBDDC1;
     --default-shadow: 0px 4px 4px #0004;
+    --default-padding: 0px 80px;
 }
 
 body{
-    padding: 0px 80px;
     font-family: "Poppins", sans-serif;
-
+    background-color: var(--secundary-color);
 }
 
 header{
     height: 60px;
-    width: calc(100% - 160px); /* faz um calculo diminuindo 160px do tamanho da pagina, fazendo funcionar em qualquer tamanho de tela */
+    width: 100%;
     position: absolute; /* tornando o header absolut ela deixa de ser do body, ficando sem pai */
     position: fixed; /* torna o objeto fixo, acompanhando sempre em toda a pagina */
-    top: 60px;
     display: flex;
     justify-content: space-between; /* serve para espalhar eles no espaço */
     align-items: center;
+    top: 60px;
+    padding: var(--default-padding);
 }
 
 header menu{
@@ -69,9 +70,117 @@ header button{
     color: var(--primary-color);
 }
 
-main{
-    height: 700px; /* temporario */
-    background-color: lightblue;
+
+section {
+    height: 100vh;
+    padding: var(--default-padding)
+}
+
+.home {
+    background-color: lightgreen;
+    background: url(./img/bg-home.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    display: grid;
+    grid-template-rows: 70% 30%;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 64px;
+}
+.hero h2{
+    font-size: 4rem;
+    width: 558px;
+    font-weight: 400;
+    margin-bottom: 64px;
+}
+.hero span {
+    color: var(--primary-color);
+}
+
+.container-pizzas {
+    display: flex;
+    justify-content: space-between; /*usado para dar espacamento entre as imagens das pizzas */
+    align-items: center;
+}
+
+.pizza {
+    position: relative; /*foi usado o relative porque é o que menos altera o comportamento dele */
+    background-color: tomato;
+    display: flex;
+    border-radius: 12px;
+}
+
+.add-produto {
+    position: absolute;
+    top: -18px;
+    right: -20px;
+    display: grid;
+    place-content: center;
+    height: 40px;
+    width: 40px;
+    font-size: 32px;
+    color: white;
+    border-radius: 12px;
+    border: 4px solid white; /* borda da caixa do + */
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: .5s;
+}
+
+.container-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    width: 100%;
+    padding: 0 12px;
+    position: absolute;
+    bottom: -36;
+    background-color: #0008;
+    border-radius: 0 0 12px 12px;
+}
+
+pizza:hover .container-info {
+    bottom: 0;
+}
+
+.container-info p {
+    width: 120px;
+    font-size: 12px;
+    color: white;
+}
+
+.animacao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
+}
+
+.container-info span {
+    display: grid;
+    place-content: center;
+    width: 57px;
+    height: 20px;
+    font-size: 12px;
+    color: white;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+}
+
+.cardapio {
+    background-color: yellow;
+}
+
+.servicos {
+    background-color: purple;
 }
 
 footer{
