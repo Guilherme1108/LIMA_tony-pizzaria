@@ -131,6 +131,10 @@ section {
     transition: .5s;
 }
 
+.pizza:hover .add-produto {
+    opacity: 1;
+}
+
 .container-info {
     display: flex;
     justify-content: space-between;
@@ -139,12 +143,12 @@ section {
     width: 100%;
     padding: 0 12px;
     position: absolute;
-    bottom: -36;
+    bottom: -36px;
     background-color: #0008;
     border-radius: 0 0 12px 12px;
 }
 
-pizza:hover .container-info {
+.pizza:hover .container-info {
     bottom: 0;
 }
 
@@ -173,6 +177,11 @@ pizza:hover .container-info {
     color: white;
     border-radius: 6px;
     background-color: var(--primary-color);
+}
+
+.pizza:hover .container-info {
+    bottom: 0;
+    transition: .5s;
 }
 
 .cardapio {
