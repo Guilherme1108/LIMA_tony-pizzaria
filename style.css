@@ -148,9 +148,6 @@ section {
     border-radius: 0 0 12px 12px;
 }
 
-.pizza:hover .container-info {
-    bottom: 0;
-}
 
 .container-info p {
     width: 120px;
