@@ -23,6 +23,10 @@ li {
     --default-padding: 0px 80px;
 }
 
+html {
+    scroll-behavior: smooth; /* faz uma animação suave para o id */
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--secundary-color);
@@ -41,7 +45,8 @@ header {
     align-items: center;
     top: 60px;
     padding: var(--default-padding);
-    z-index: 999;
+    z-index: 999; /* coloca ele na frente de tudo */
+    background-color: #fff5; /* coloca uma cor meio transparente */
     /* utilizamos isso para ele ficar em cima de todos os objetos */
 }
 
