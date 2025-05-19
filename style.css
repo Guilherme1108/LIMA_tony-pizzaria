@@ -15,9 +15,8 @@ li {
     list-style: none;
 }
 
-:root {
+:root {     /* criando cores com escopo global, para todo o projeto, usando o -- como boas práticas de nome */
     --primary-color: #F07807;
-    /* criando cores com escopo global, para todo o projeto, usando o -- como boas práticas de nome */
     --secundary-color: #FEF8F2;
     --default-shadow: 0px 4px 4px #0004;
     --default-padding: 0px 80px;
@@ -65,7 +64,6 @@ header li {
 header li:hover {
     background-color: var(--secundary-color);
     box-shadow: var(--default-shadow);
-
 }
 
 header button {
@@ -388,3 +386,109 @@ footer {
     font-weight: 300;
     font-style: italic;
 }
+
+/* Tablet */
+@media (max-width:1024px) {
+    header {
+        position: absolute;
+        background-color: transparent;
+        left: 0;
+        top: 48px;
+    }
+
+    header menu {
+        width: 100vw;
+        height: 64px;
+        position: fixed; /* faz a referencia ser a janela */ /* quando ele sai do header ele perde as referencias tendo que colocalas novamente */
+        left: 0;
+        bottom: 0;
+        background-color: var(--primary-color);
+        z-index: 999;
+        color: white;
+        justify-content: space-evenly;
+        /* pointer-events: none; tira os efeitos do mouse quando é clicado  não usaremos porque ele tambem tira as funções */
+    }
+
+    header li:hover {
+        color: var(--primary-color);
+    }
+
+    .home {
+        grid-template-rows: none;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: end;
+        padding-bottom: 64px;
+    }
+
+    .home .container-produtos {
+        display: none;
+    }
+
+    .container-produtos {
+        gap: 32px;
+    }
+
+    .container-produtos .pizza{
+        width: 100%;
+    }
+
+    .container-produtos img {
+        width: 100%;
+    }
+
+    .container-produtos .pizza:nth-child(3),/* apaga o filho 3 */
+    .container-produtos .pizza:nth-child(4), /* apaga o filho 4  */
+    .container-produtos .pizza:nth-child(5) {  /* apaga o filho 5 que é uma coca-cola  */
+        display: none;
+    }
+
+    .cardapio {
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .pizza.bebida {
+        width: auto;
+    }
+
+    .opcoes-servicos {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .servico-card {
+        width: 100%;
+        height: 260px;
+        flex-wrap: wrap;
+    }
+    .servico-card p {
+        width: 60%;
+    }
+
+    .contatos-container {
+        height: 400px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contatos-item {
+        padding: 0;
+    }
+
+    .contatos-item:nth-child(2) {
+        display: none;
+    }
+
+    .contatos-item.social {
+        align-items: end;
+    }
+
+    .creditos {
+        margin-bottom: 64px;
+    }
+}
+
