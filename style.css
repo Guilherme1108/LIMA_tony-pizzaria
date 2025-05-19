@@ -88,7 +88,6 @@ section {
 }
 
 .home {
-    background-color: lightgreen;
     background: url(./img/bg-home.svg);
     background-repeat: no-repeat;
     background-position: top right;
@@ -492,3 +491,32 @@ footer {
     }
 }
 
+/* Mobile */
+@media (max-width:768px) {
+
+    .home {
+        height: 100%;
+        width: 100%;
+        background: url(./img/background-mobile.svg);
+        background-color: #F07807;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero h2 {
+        width: 100%;
+        font-size: 2rem;
+        margin: 0;
+    }
+    .hero img {
+        display: none;
+    }
+
+    .servico-card p {
+        display: none;
+    }
+
+    .container-produtos .pizza:nth-child(2) {
+        display: none;
+    }
+}
