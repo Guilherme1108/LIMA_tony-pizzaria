@@ -494,8 +494,26 @@ footer {
 /* Mobile */
 @media (max-width:768px) {
 
+    header img {
+        visibility: hidden;
+    }
+    header {
+        background-image: url(./img/tony-icon_branco.svg);
+        background-repeat: no-repeat;
+        background-position: 12px;
+        gap: 80px;
+    }
+
+    button img {
+        visibility: visible;
+    }
+
+    header menu {
+        gap: 12px;
+    }
+
     .home {
-        height: 100%;
+        height: 852px;
         width: 100%;
         background: url(./img/background-mobile.svg);
         background-color: #F07807;
@@ -505,10 +523,19 @@ footer {
 
     .hero h2 {
         width: 100%;
-        font-size: 2rem;
+        font-size: 3rem;
+        color: white;
         margin: 0;
     }
+
+    .hero span {
+        background-color: white;
+    }
     .hero img {
+        display: none;
+    }
+
+    .titulo-opcoes a {
         display: none;
     }
 
@@ -516,7 +543,35 @@ footer {
         display: none;
     }
 
-    .container-produtos .pizza:nth-child(2) {
+    .container-produtos .pizza:nth-child(2),
+    .container-produtos .pizza:nth-child(6) {
         display: none;
+    }
+
+    .opcoes-cardapio {
+        width: 100%;
+    }
+
+    .servicos {
+        padding: 0;
+    }
+
+    .opcoes-servicos {
+        width: 100vw;
+    }
+
+    footer {
+        height: 600px;
+    }
+
+    .contatos-item.logo {
+        align-items: center;
+    }
+
+    .contatos-item {
+        align-items: center;
+    }
+    .social menu {
+        flex-direction: row;
     }
 }
