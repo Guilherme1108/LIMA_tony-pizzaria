@@ -535,12 +535,25 @@ footer {
         display: none;
     }
 
+    .cardapio {
+        height: 1100px;
+    }
+
+    .opcoes-cardapio{
+        align-items: center;
+    }
+
     .titulo-opcoes a {
         display: none;
     }
 
     .servico-card p {
         display: none;
+    }
+
+    .container-produtos {
+        justify-content: center;
+
     }
 
     .container-produtos .pizza:nth-child(2),
